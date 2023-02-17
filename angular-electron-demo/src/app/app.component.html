@@ -1,0 +1,41 @@
+<div class="wrapper">
+	<div class="header">
+		<h1>{{ title }}</h1>
+		<span>{{ subtitle }}</span>
+	</div>
+
+	<div class="content">
+		<label for="path">Path: </label>
+		<input
+			id="path"
+			type="text"
+			placeholder="Enter file path here..."
+			[(ngModel)]="pathString"/>
+		<button 
+			class="btn-default" 
+			(click)="checkFileExists()">
+			Check file exists
+		</button>
+		<p>
+			Check if file is available:
+			<b [ngClass]="checkIsFileAvailable ? 'green' : 'red'">
+				{{ checkIsFileAvailable }} 
+			</b>
+		</p>
+		<p>Path you want to enter: {{ pathString }}</p>
+
+		<hr>
+
+		<button
+			(click)="startExe()"
+			class="btn-default"
+			[ngClass]="!checkIsFileAvailable ? 'disabled' : ''"
+			[disabled]="!checkIsFileAvailable">
+			Start EXE
+		</button>
+		<p>
+			Check if EXE is running:
+			<b [ngClass]="runExe ? 'green' : 'red'">{{ runExe }}</b>
+		</p>
+	</div>
+</div>

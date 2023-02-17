@@ -1,0 +1,48 @@
+.wrapper {
+    
+    .header {
+        padding: 1rem 1rem;
+        box-shadow: 2px 15px 20px -9px rgba(0,0,0,0.51);
+    }
+
+    .content {
+        padding: 1rem 1rem;
+
+        #path {
+            display: block;
+            padding: 0.625rem;
+            width: 50%;
+            font-size: medium;
+        }
+
+        .btn-default {
+            padding: 0.625rem;
+            margin-top: 0.625rem;
+            font-size: medium;
+            background-color: #bbbbbb57;
+            border: 1px solid #e1e1e1;
+            border-radius: 6px;
+
+            &:hover {
+                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            }
+
+            &.disabled {
+                cursor: not-allowed;
+
+                &:hover {
+                    box-shadow: none;
+                }
+            }
+        }
+
+        // Sets boolean text in the corresponding color
+        .green {
+            color: green;
+        }
+
+        .red {
+            color: red;
+        }
+    }
+}
